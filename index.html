@@ -1,159 +1,70 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Gibsaucers</title>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="/images/firstpicofme.JPG">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Updating</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">Gibsaucer</a></h1>
-				</header>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+                270deg,
+                #ff6ec4,
+                #7873f5,
+                #4ade80,
+                #facc15,
+                #fb7185,
+                #38bdf8
+            );
+            background-size: 1200% 1200%;
+            animation: gradientShift 30s ease infinite;
+        }
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>The Svib has landed</h2>
-							<p>And there are no stibs or flying jibs.<br />
-							Just saucers. Lots of mother flipping saucers.</p>
-						</header>
-						<span class="image"><img src="images/firstpicofmee.JPG" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/vib_banner.png" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>What is Svib and where is the Gibsaucer?</h2>
-										<p>Oh its in Lindon, Utah</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>In the sleepy town of Lindon, Utah, nestled amidst rolling hills and whispering pines, stood a peculiar sight known as the Gibsaucer. 
-										Its sleek, metallic exterior gleamed under the sun, captivating the curious minds that stumbled upon it. But Svib, a jib with its constantly 
-										rotating limbs, felt a deep connection with the enigmatic saucer.</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>Every day, as the crimson hues painted the horizon, Svib would venture into the heart of the Gibsaucer. Within its alien architecture, Svib discovered a 
-										language of hums and vibrations that whispered secrets of distant worlds. Through this cosmic symphony, Svib unlocked new dimensions of existence, transcending 
-										the limitations of its jib form.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+        .container {
+            text-align: center;
+            color: white;
+            padding: 40px;
+            backdrop-filter: blur(6px);
+        }
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/vib_banner2.png" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>The timeline of the saucer?!</h2>
-							<p>When did it all begin? Where did it start? Who is the creator of the Gibsaucer?</p>
-						</header>
-						<p></p>
-						<ul class="actions">
-							<li><a href="timeline.html" class="button">The Sauce</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.35);
+        }
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/vib_banner3.png" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Ancient Subidia?!</h2>
-							<p>A time of innovation and creativity.</p>
-						</header>
-						<p>In the ancient land of Subidia, three unique and mysterious races, the Jibs, the Stibs, and the Gorgibitans, have coexisted for centuries. Each race possesses its own distinct characteristics and abilities, making Subidia a realm of endless wonders.
-							For centuries, these races have governed Subidia side by side, although not without occasional conflicts and disagreements. However, their shared goal to protect their homeland has united them and helped create a 
-							delicate balance of power. In this ancient land of wonders and magic, the Jibs' soaring Gibsaucers, the Stibs' nature wisdom, and the Gorgibitans' unyielding strength have shaped a captivating tapestry of Subidia's history. </p>
-						<ul class="actions">
-							<li><a href="#" class="button">Svibian</a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+        img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+		<h1>Uh Oh</h1>
+        <h1>Gibsaucer not found...</h1>
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>The Vib Commandments</h2>
-							<p>Carry out these tasks to obtain eternal peace and stibility</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Hike</h3>
-									<p>Go to the top of Deukmejian and give your prayers to the eternal jib</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Speak</h3>
-									<p>Learn Ancient Subidian, as it will allow you to communicate with the saucers above</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Learn</h3>
-									<p>Study the siences behind the Gibsaucer, so you can become one too</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Travel</h3>
-									<p>Go to Lindon, Utah, the home of the last Svibian and give an offering of meat with cheese on top</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Document</h3>
-									<p>Note all of your experiences with the vib coursing through your veins </p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Lock</h3>
-									<p>Secure the Vibad and Jibad together</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
-			
-			<!-- Footer -->
-				<footer id="footer">
-					
-					<ul class="copyright">
-						<li>&copy; Vib. All rights reserved (Jk).</li>
-					</ul>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        <img
+            alt="Updating"
+            src="images/Rex_And_Cody.jpg"
+        >
+    </div>
+</body>
 </html>
