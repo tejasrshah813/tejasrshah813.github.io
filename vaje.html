@@ -163,6 +163,23 @@ a:hover {
         opacity: 0.9;
     }
 }
+
+/* 💥 Explosion */
+.explosion-face {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    100% {
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0.5) rotate(720deg);
+        opacity: 0;
+    }
+}
+
 </style>
 </head>
 
@@ -278,31 +295,51 @@ a:hover {
             <p>- Vibhu</p>
         </div>
     </div>
-  <p>Made with the love & millions of GPUs <3</p>
+   <!-- Footer -->
+    <div class="footer">
+        Made with ❤️ & millions of GPUs
+    </div>
 </div>
 
 <!-- 😈 VAHE FACE RAIN SCRIPT -->
 <script>
+// 😈 Rain
 function createFace() {
     const face = document.createElement("img");
     face.src = "images/vahe/Vahe_Face.png";
-    face.classList.add("falling-face");
+    face.className = "falling-face";
 
     face.style.left = Math.random() * window.innerWidth + "px";
-
-    const size = Math.random() < 0.1 ? 120 : 40 + Math.random() * 60;
-    face.style.width = size + "px";
-
+    face.style.width = (40 + Math.random() * 60) + "px";
     face.style.animationDuration = (3 + Math.random() * 4) + "s";
 
     document.body.appendChild(face);
-
-    setTimeout(() => {
-        face.remove();
-    }, 7000);
+    setTimeout(() => face.remove(), 7000);
 }
-
 setInterval(createFace, 250);
+
+// 💥 Explosion
+document.addEventListener("click", function(e) {
+    for (let i = 0; i < 50; i++) {
+        const face = document.createElement("img");
+        face.src = "images/vahe/Vahe_Face.png";
+        face.className = "explosion-face";
+
+        face.style.left = e.clientX + "px";
+        face.style.top = e.clientY + "px";
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 100 + Math.random() * 200;
+
+        face.style.setProperty("--x", Math.cos(angle) * distance + "px");
+        face.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+        face.style.width = (30 + Math.random() * 40) + "px";
+
+        document.body.appendChild(face);
+        setTimeout(() => face.remove(), 1000);
+    }
+});
 </script>
 
 </body>
