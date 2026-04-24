@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HBD VAHE!!!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 🌈 Animated Gradient Background */
+body {
+    background: linear-gradient(
+        270deg,
+        #ff6ec4,
+        #7873f5,
+        #4ade80,
+        #facc15,
+        #fb7185,
+        #38bdf8
+    );
+    background-size: 1200% 1200%;
+    animation: gradientShift 25s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 📦 Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+/* 🎉 Header */
+.header {
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* 🧊 Cards */
+.card {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    width: 100%;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    transform: translateY(40px);
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Alternate layout */
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* ✨ Animation */
+@keyframes fadeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 🖼️ Images (FIXED: no cropping) */
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* 📝 Text */
+.text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h2 {
+    margin: 0 0 10px 0;
+}
+
+.text p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 🔗 Links */
+a {
+    color: #fff;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #facc15;
+}
+
+/* 📱 Mobile */
+@media (max-width: 700px) {
+    .card {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🎉 HAPPY 24TH BIRTHDAY VAHE 🎉</h1>
+        <p>Scroll down for messages 👇</p>
+    </div>
+
+    <div class="card" style="animation-delay: 0.1s;">
+        <img src="images/vahe/Vahe_tounge.png">
+        <div class="text">
+            <h2>As another year has come to pass, I write you a message to congratulate you on your birthday. Happy Birthday Vaje! I hope you're able to live a life doing whatever you want to do. Live your life on your terms and enjoy 2026 to the fullest. 🎉</h2>
+            <p>- Henry</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.2s;">
+        <img src="images/vahe/core.JPG">
+        <div class="text">
+            <h2>Happy Birthday Vahe-jan!</h2>
+            <p>- Jon</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.3s;">
+        <img src="images/vahe/fire.jpg">
+        <div class="text">
+            <h2>Hazar barev Vahe jan. I'm so very grateful to call you my friend. To another year of shenanigans, shooting the shit, and sharing wisdom. Happy birthday.</h2>
+            <p>- Barris</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.3s;">
+        <img src="images/vahe/kev.jpg">
+        <div class="text">
+            <h2>Happy Birthday Vahe</h2>
+            <p>- Kelvin</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.4s;">
+        <img src="images/vahe/fish.jpg">
+        <div class="text">
+            <h2>Happy Birthday Habibi! You're an amazing person and an even more amazing friend. Love ya face and keep on vaheing around!</h2>
+            <p>- Tejas</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.5s;">
+        <img src="images/vahe/toilet.jpg">
+        <div class="text">
+            <h2>Happy birthday Vahe! You're truly one of the dopest dudes out there. Hope you find some great books with psychological depth, learn some sick guitar pieces, and have an awesome year. Reeeheeheeheehee</h2>
+            <p>- Soods</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.6s;">
+        <img src="images/vahe/card.jpg">
+        <div class="text">
+            <h2></h2>
+            <p>- Otto</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.7s;">
+        <img src="images/vahe/arcade.jpg">
+        <div class="text">
+            <h2>Happy 24th birthday NANI! Make sure you allow yourself to e jivvy it up a little bit more this year before you hit quarter-life crisis next year!</h2>
+            <p>- Abel</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.8s;">
+        <img src="images/vahe/fence.jpg">
+        <div class="text">
+            <h2>Happy birthday Vahe! Wishing you all the best, and hope you enjoy many more birthdays!</h2>
+            <p>- Mendez</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 0.9s;">
+        <img src="images/vahe/hike.jpg">
+        <div class="text">
+            <h2>My child is 24 now 😭 proud of you</h2>
+            <p>- Gasper</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 1s;">
+        <img src="images/vahe/nap.jpg">
+        <div class="text">
+            <h2></h2>
+            <p>- Ara</p>
+        </div>
+    </div>
+
+    <div class="card" style="animation-delay: 1.1s;">
+        <img src="images/vahe/hw.jpg">
+        <div class="text">
+            <h2>
+                <a href="https://www.desmos.com/calculator/7ngp62oljl" target="_blank">
+                    Vibhu’s surprise 👀
+                </a>
+            </h2>
+            <p>- Vibhu</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- 🎊 Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function startConfetti() {
+    setInterval(() => {
+        confetti({
+            particleCount: 25,
+            spread: 60,
+            startVelocity: 25,
+            origin: {
+                x: Math.random(),
+                y: 0
+            }
+        });
+    }, 250);
+}
+
+startConfetti();
+</script>
+
+</body>
+</html>
