@@ -75,12 +75,10 @@ body {
     animation: fadeUp 0.8s ease forwards;
 }
 
-/* Alternate layout */
 .card:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-/* ✨ Animation */
 @keyframes fadeUp {
     to {
         transform: translateY(0);
@@ -88,7 +86,7 @@ body {
     }
 }
 
-/* 🖼️ Images (FIXED: no cropping) */
+/* 🖼️ Images */
 .card img {
     width: 250px;
     height: 250px;
@@ -116,11 +114,17 @@ body {
     font-weight: bold;
 }
 
+/* Kelvin extra image inside text */
+.inline-img {
+    margin-top: 15px;
+    width: 150px;
+    border-radius: 12px;
+}
+
 /* 🔗 Links */
 a {
     color: #fff;
     text-decoration: underline;
-    transition: 0.2s;
 }
 
 a:hover {
@@ -137,6 +141,26 @@ a:hover {
     .card img {
         width: 100%;
         height: auto;
+    }
+}
+
+/* 😈 VAHE FACE RAIN */
+.falling-face {
+    position: fixed;
+    top: -100px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(50px, 110vh) rotate(360deg);
+        opacity: 0.9;
     }
 }
 </style>
@@ -175,10 +199,14 @@ a:hover {
         </div>
     </div>
 
-    <div class="card" style="animation-delay: 0.3s;">
+    <!-- Kelvin -->
+    <div class="card" style="animation-delay: 0.35s;">
         <img src="images/vahe/kev.jpg">
         <div class="text">
-            <h2>Happy Birthday Vahe</h2>
+            <h2>
+                Happy Birthday Vahe<br>
+                <img src="images/vahe/summon.jpg" class="inline-img">
+            </h2>
             <p>- Kelvin</p>
         </div>
     </div>
@@ -253,25 +281,28 @@ a:hover {
 
 </div>
 
-<!-- 🎊 Confetti Script -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
+<!-- 😈 VAHE FACE RAIN SCRIPT -->
 <script>
-function startConfetti() {
-    setInterval(() => {
-        confetti({
-            particleCount: 25,
-            spread: 60,
-            startVelocity: 25,
-            origin: {
-                x: Math.random(),
-                y: 0
-            }
-        });
-    }, 250);
+function createFace() {
+    const face = document.createElement("img");
+    face.src = "images/vahe/Vahe_Face.png";
+    face.classList.add("falling-face");
+
+    face.style.left = Math.random() * window.innerWidth + "px";
+
+    const size = Math.random() < 0.1 ? 120 : 40 + Math.random() * 60;
+    face.style.width = size + "px";
+
+    face.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(face);
+
+    setTimeout(() => {
+        face.remove();
+    }, 7000);
 }
 
-startConfetti();
+setInterval(createFace, 250);
 </script>
 
 </body>
